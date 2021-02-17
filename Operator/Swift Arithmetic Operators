@@ -1,0 +1,55 @@
+You use the arithmetic operators to do addition +, subtraction -, multiplication *, and division /.
+
+The following code shows how to use Arithmetic Operators.
+
+let a1 = 1 + 2
+let a2 = 3 - 1
+let a3 = 6 * 5
+let a4 = 12 / 3
+All of the examples in the code above result in integer output.
+
+If one of the values is a Float or Double data type, then the result will be a floating-point data type as well.
+
+
+
+
+ 
+
+Remainder Operator
+To get the remainder part of the result, you can use the remainder operator %.
+
+The following code shows how to use Division and Remainder Operators
+
+let r5 = 13 / 3
+let r6 = 13 % 3
+
+Increment and Decrement Operators
+The unary increment operator ++ and the unary decrement operator -- increase or decrease the value of a number by 1.
+
+The following code show show to use unary plus ++.
+
+var a1 = 5
+
+a1 //Returns 5
+++a1 //Returns 6
+a1++ //Returns 6
+a1 //Returns 7
+In the code above we increment with the ++ as a suffix, you still get the original value reported.
+
+
+
+
+ 
+
+Compound Operators
+Arithmetic operators can be combined with the assignment operator to perform an arithmetic function and assign the result to the value.
+
+var i = 0 //Declare and assign i integer equal to 0
+i+=4      //Add 4 to i and assign result back to i
+i*=2      //Multiple i by 2 and assign result back to i
+String Concatenation
+The addition operator + is also used to add strings and characters together.
+
+let s1 = "Hello"
+let s2 = "World"
+let s3 = s1 + " " + s2 + "!"
