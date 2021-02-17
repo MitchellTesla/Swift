@@ -1,0 +1,23 @@
+A subscript is a key that is used to extract a value from a collection. For example, we use the subscript in array or dictionary.
+
+In Swift we can add subscript to our own types.
+
+Example
+The following code shows how to add subscript to Person class.
+
+class Person {
+    private var roles = ["Manager", "Coder", "Designer"]
+
+    subscript(index: Int) -> String {
+        get {
+            return roles[index]
+        }
+        set(newValue) {
+            self.roles[index] = newValue
+        }
+    }
+}
+
+var p = Person()
+println(p[1])
+p[0] = "Tester"
