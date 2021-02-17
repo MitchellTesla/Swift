@@ -1,0 +1,51 @@
+We use comparison operators to compare two values. We can test for equality or whether one value is greater or less than another value.
+
+The following code describes the comparison operators available in Swift.
+
+Operator	Description
+x == y	Equal to
+x != y	Not equal to
+x > y	Greater than
+x >=y	Greater than or equal to
+x < y	Less than
+x <= y	Less than or equal to
+x === y	Two objects are equal
+x !== y	Two objects are not equal
+
+
+
+ 
+
+Example
+Comparison operators return a boolean result that you can store in a boolean variable or constant.
+
+The following code shows how to use Comparison Operators.
+
+let x = 100
+let y = 200
+
+//Returns true
+let b1 = x < y
+
+//Returns false
+let b2 = x == y
+Comparison operators are often used with if statements to control program flow.
+
+
+
+
+ 
+
+Ternary Conditional Operator
+Ternary conditional operator evaluates a condition and then do one of two things based on the result of the condition.
+
+The ternary conditional operator is written like this: condition ? action1 : action2.
+
+The condition is an expression that returns a boolean true or false.
+
+If the condition returns true, then the first action takes place. If the condition returns false, then the second action takes place.
+
+The following code shows how to use Ternary Conditional Operator.
+
+let a = 5
+a == 5 ? "We're good" : "Oops, not quite"
