@@ -1,0 +1,36 @@
+Tuples are ordered lists of values.
+
+In Swift, you can group related elements together as a tuple, reducing the need to depend on complex types, objects, and immutable arrays.
+
+Example
+The following code shows how you would declare a tuple for a rectangle.
+
+let rectangle1 = (0, 0, 200, 100)
+The code above uses the let keyword to declare a constant and give the constant the name rectangle1.
+
+After the assignment operator =, you supply a comma-separated list of values enclosed in parentheses.
+
+The value of rectangle1 would be (0, 0, 200, 100) .
+
+For greater clarity, you can annotate each value in the tuple list as shown in the following code.
+
+var rectangle2 = (x:0, y:0, width:200, height:100)
+To pull an individual value out of a tuple, decompose the values and assign them to a constant.
+
+let (a, b, c, d) = rectangle1
+println(c)
+
+To decompose your tuple values, you can use the let keyword followed by a comma-separated list of variable names.
+
+Each name will be filled with the corresponding value from the tuple.
+
+You can now use these variables as usual.
+
+To ignore some values in a tuple, replace a variable name with an underscore _.
+
+So, if you needed only the x origin for the rectangle, you could do as follows.
+
+var (e, _, _, _) = rectangle2
+print(e)
+You can assign tuple values to either constants or variables.
+
