@@ -1,4 +1,5 @@
-# Swift - MITCHELL 2021 v0.7.0
+# Swift - MITCHELL 2021 reference guide
+
 Swift is the programming language customized by Apple and introduced as Objective-C without the C.
 Swift is an object-oriented language that builds upon familiar concepts from Objective-C but includes a modern, safer syntax and multiple paradigms such as object-oriented, functional, imperative, and block structured.
 
@@ -19,6 +20,5 @@ automatic memory management.
 Swift was built using the highly optimized LLVM compiler.
 
 
-
-v0.7.0 Justin Mitchell 2021
+ Justin Mitchell - 2021
 
