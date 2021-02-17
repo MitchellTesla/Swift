@@ -1,0 +1,37 @@
+Type Methods
+Class functions are also called as methods.
+
+Instance methods require a type instance.
+
+Type methods are functions that require the type (class, enumeration, or structure) to work.
+
+To declare a type method for a class, you must use the class keyword.
+
+class Person {
+    class var species:String{
+        return "Human"
+    }
+
+    class func printDescription() {
+        println( "Species: \(species).")
+    }
+}
+Person.printDescription()
+
+
+
+ 
+
+Type Methods for Value Types
+Structures and enumerations work in the same way for type methods except that you substitute the class keyword with the static keyword.
+
+struct Rectangle {
+    static var gtp = "This is a rectangle"
+
+    static func printDescription() {
+        println("Desc: \(gtp).")
+    }
+
+}
+
+Rectangle.printDescription()
