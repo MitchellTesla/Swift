@@ -1,0 +1,71 @@
+Generics means parameterized types. Using generics, we can create a single class that works with different types of data. A class, protocal, or method that operates on a parameterized type is called generic.
+
+To use generics, you must add <T> after a function name.
+
+Then you can substitute T in place of the type name.
+
+Example
+The following code shows how to define function with generic parameters.
+
+Type Checking
+class Person {
+    func profile() -> String {
+        return "Person"
+    }
+}
+
+class Employee: Person {
+    override func profile() -> String {
+        return "Employee"
+    }
+}
+var p1 = Person()
+var e1 = Employee()
+
+func printPerson<T>(p:T){
+    let o = p as Person
+    println(o.profile())
+}
+
+printPerson (p1)
+printPerson (e1)
+
+
+
+
+
+ 
+
+Example 2
+The following code shows how you would add type checking to your function.
+
+class Person {
+    func profile() -> String {
+        return "Person"
+    }
+}
+
+class Employee: Person {
+    override func profile() -> String {
+        return "Employee"
+    }
+}
+
+func printPerson<T>(p:T){
+    if p is Person || p is Employee{
+        let o = p as Person
+        println(o.profile())
+    }
+    else{
+        println("\(p) is not supported.")
+    }
+}
+
+var p1 = Person()
+var e1 = Employee()
+
+printPerson (p1)
+printPerson (e1)
+
+var s = "ABC"
+printPerson(s)
