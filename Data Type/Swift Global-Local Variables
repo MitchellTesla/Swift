@@ -1,0 +1,27 @@
+Scope refers to a portion of a program.
+
+We can access variables only from the portion of the program where the variable has been declared.
+
+Global scope variables can be accessed from anywhere in your Swift program.
+
+Portions of the program are defined by various Swift constructs such as if statements, functions, and classes.
+
+You will see curly brackets {} used with Swift constructs to define a scope for part of your program.
+
+Example
+The following code uses if statement as an example to demonstrate scope.
+
+let isTrue = true
+
+if(isTrue){
+    var myString = "This is a true statement"
+    println(myString)
+}
+
+The code above declares a boolean constant called isTrue and uses an if statement to test to see whether isTrue is set to a true value.
+
+We define a scope with curly brackets {} and put the code in between the curly brackets.
+
+myString is a variable that is local to the scoped area of if statement. We can access myString only in that scoped area.
+
+Since isTrue is a global variable, you can use that anywhere in your program, including the scoped area after if statement.
