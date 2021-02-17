@@ -1,0 +1,58 @@
+The following table describes the common Swift data types.
+
+Data Type	Description
+String	Sequence of characters
+Int	Whole number
+Float	Number with fractional component
+Double	Bigger number with fractional component
+Bool	True or false value
+Example
+The following code how to use these data types.
+
+
+let s:String = "Hey There"
+let i:Int = -5
+let f:Float = 3.14
+let d:Double = 9.9
+let b:Bool = true
+
+
+
+ 
+
+Type Inference
+Swift compiler can figure data type out based on what value you assign to the variable or constant. This is called type inference.
+
+This means you could have omitted the :String from your declarations and instead use something as follows.
+
+var s3 = "java2s.com"
+Printing Variables and Constants
+The following code uses the println function to output string to console.
+
+
+import Foundation
+println("Hello, World!")
+The following code shows how to print Variables.
+
+import Foundation
+let s:String = "Hey There"
+println(s)
+println() prints something out and then goes to the next line, print() will print out a value without moving to the next line in the console window.
+
+import Foundation
+print("Print this")
+print(" and ")
+print("that")
+
+
+
+ 
+
+Swift Type Aliases
+We can add an alternative name for existing types using type aliases.
+
+The following code uses a type alias to define Note as an alternative to String.
+
+typealias Note = String
+var n1:Note = "hi"
+You can treat n1 as a string.
