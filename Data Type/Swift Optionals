@@ -1,0 +1,63 @@
+If you can't be sure a variable has a value present, you can use optionals.
+
+An optional is a variable that can have either an assigned value or no value at all.
+
+Using optionals is an alternative to setting objects to nil .
+
+Optionals can be used with any type in Swift including numbers, strings, and objects.
+
+You declare optionals like variables or constants, but you must include a ? after the type declaration.
+
+Like variables and constants, the data type of an optional may be inferred.
+
+The following code shows how to declare String Optional.
+
+var s:String?
+The variable s in the code above is declared as an optional, and the starting value is nil.
+
+
+
+
+ 
+
+Forced Unwrapping
+If you are sure that an optional has a value, then you can use an exclamation point !! to unwrap the value.
+
+For instance, if you know that s has a value, then you could unwrap s and use the value as follows.
+
+var s:String?
+s = "ABC"
+println(s!)
+Attempt to unwrap an optional that has no value, you will get a runtime error.
+
+We need to test your optional with an if statement before attempting to unwrap the optional.
+
+The following code shows how to test an optional Before Unwrapping Optionals.
+
+if s{
+    "The value of s is "
+    s!
+}else{
+    "No value in s"
+}
+
+
+
+ 
+
+Optional Bindings
+Optional bindings tests an optional and unwraps the optional in an if statement.
+
+The following code shows how to use Optional Bindings.
+
+var s:String?
+s = "ABC"
+println(s!)
+
+if let myString = s{
+    "The value of s is "
+    myString
+}else{
+    "No value in s"
+}
+The code above has a constant declaration right after the if statement so that you are testing for nil and assigning a temporary constant in the code block if a value is present.
