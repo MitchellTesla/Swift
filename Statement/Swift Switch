@@ -1,0 +1,62 @@
+switch statements are used to execute code based on the value of a variable.
+
+Example
+var shape = 1
+
+switch shape {
+    case 0:
+        println("0")
+    
+    case 1:
+        println("1")
+    default:
+        println("No Shape Specified")
+
+}
+
+
+
+
+ 
+
+break from switch
+When the break statement is reached, program control leaves the switch statement and resumes at the end right after the ending curly brace }.
+
+let x = 6
+
+switch x {
+
+case 0...5:
+    println("0 through 5")
+
+case 6:
+    break
+
+case 7:
+    println("Value 7")
+
+default:
+    println("Default")
+
+}
+When a case condition is made, code execution stops in the switch and resumes right after the ending curly bracket }.
+
+
+
+
+ 
+
+fallthrough
+If you would like to code switch statements that do include this fall-through behavior, you can use the fallthrough statement.
+
+switch x {
+
+  case 0...5:
+     println("0 through 5")
+  case 6:
+     fallthrough
+  case 7:
+     println("Value 6 or 7")
+  default:
+     println("Default")
+}
