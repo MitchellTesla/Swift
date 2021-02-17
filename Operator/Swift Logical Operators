@@ -1,0 +1,29 @@
+The logical operators are used with boolean values and expressions that return boolean values.
+
+Logical operators are used to test whether two expressions are true or whether one expression is true.
+
+The following table describes the logical operators supported by Swift.
+
+Operator	Description
+!x	Logical NOT
+x && y	Logical AND
+x || y	Logical OR
+Example
+The following code shows how to use Logical AND.
+
+let x = true
+let y = false
+
+let a = x && y
+The following code shows how to use Logical OR.
+
+let x = true
+let y = false
+
+let b = x || y
+The following code shows a Logical NOT.
+
+let x = true
+let y = false
+
+let c = !x
