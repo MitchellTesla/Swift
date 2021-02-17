@@ -1,0 +1,30 @@
+if statements are used to make a choice to execute code based on the result of a comparison expression.
+
+if (1 < 2){
+   println("This is true")
+}
+In the code above if 1 is less than 2, then execute the code that will print out the string "That is true" to the console log.
+
+else Keyword
+You can also define an alternate action with the else keyword.
+
+You execute either one of two actions based on the results of the expression.
+
+if (1 < 2){
+    println("That is true")
+} else {
+    println("Not true")
+}
+The code above will print out the text "That is true" to the console log since 1 is always less than 2.
+
+The following code shows how to use Nested if Statements.
+
+if (1 > 2){
+    println("True")
+} else {
+    if (3 > 4){
+        println("True")
+    } else {
+        println("Not True")
+    }
+}
