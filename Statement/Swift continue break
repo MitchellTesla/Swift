@@ -1,0 +1,50 @@
+continue Statement
+continue statement stops code execution and return to the beginning of the loop's code block.
+
+for i in 1...10 {
+    if (i >=4 && i <= 7){
+        continue
+    }
+    println(i)
+}
+The code above generates the following result.
+
+
+The numbers 4 through 7 are not printed because of the continue statement.
+
+
+
+
+ 
+
+break Statement
+break statement completely interrupts the execution of a loop.
+
+for i in 1...10 {
+    if (i >=4 && i <= 7){
+        break
+    }
+    println(i)
+}
+
+The code above generates the following result.
+
+
+You can use break statements in switch statements.
+
+
+
+
+ 
+
+Labeled Statements
+You can use the break continue , and fallthrough control statements with labeled statements.
+
+outerloop: for x in 1...3 {
+    innerloop: for y in 1...3 {
+        if y == 2{
+            continue outerloop
+        }
+        println("x = \(x), y = \(y)")
+    }
+}
