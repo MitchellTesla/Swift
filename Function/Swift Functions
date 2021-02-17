@@ -1,0 +1,86 @@
+You can declare a function with the func keyword.
+
+Functions organizes code into reusable chunks that take input parameters and return results.
+
+The following code shows an example of a function that returns the string "Hello World."
+
+func myFunction() -> String{
+    return "Hello World"
+}
+let s = myFunction();
+println(s)
+//Calling Functions Directly
+println(myFunction())
+In the code above, the function declaration starts with the func keyword followed by the name of the function.
+
+The following code shows a function that just writes out the log without returning a value.
+
+func myFunction() {
+    println("Printing myFunction() function")
+    return
+}
+myFunction()
+
+
+
+ 
+
+Parameters
+To declare a function with parameters, you include the name of the parameter and the data type of the parameter.
+
+func averageScore(scores:[Float]) -> Float{
+    var total:Float = 0
+    var count:Float = 0
+
+    for score in scores{
+        total+=score
+        count++
+    }
+
+    return total / count
+}
+
+let result = averageScore([0, 9, 4, 6, 7, 5, 3, 9])
+When functions have more than one parameter, you include them in a comma-separated list.
+
+func printStuff (this:String, that:String){
+    println("\(this) \(that)!")
+    return
+}
+printStuff("Hello", "World")
+
+
+
+ 
+
+Nested Functions
+You can code functions within other functions.
+
+Nesting functions can organize and reuse our code while limiting the scope of functions to the parent function.
+
+func myFunction(){
+    func calculate(scores:[Int]) -> Float?{
+       if scores.count > 0 {
+          var total:Int = 0
+          var count:Int = 0
+          for score in scores{
+            total+=score
+            count++
+          }
+          return (Float)(total / count)
+       }else {
+            return nil
+       }
+    }
+    func printReport(testName:String, scores:[Int]){
+        if let a = calculate(scores){
+            println("\(testName) Test Results")
+            println(" The average score is \(a)")
+        }
+    }
+    printReport("Math", [9, 4, 2, 6, 5, 5, 3, 9])
+    printReport("Java", [3, 7, 2, 5])
+
+}
+
+myFunction()
