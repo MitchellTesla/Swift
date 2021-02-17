@@ -1,0 +1,58 @@
+Swift Numbers have their own data types.
+
+In Swift some number data types can store larger numbers than others.
+
+Numbers that have a fractional component are treated differently than numbers that are whole numbers.
+
+Integers
+Integers are whole numbers that may be either positive or negative.
+
+Integers don't have any decimal places.
+
+For example, 1, 2, and -9 are all integers.
+
+Int is used when you don't need to specify a size for the integer.
+
+The following code declares Integers
+
+let i1:Int = 5
+var i2 = 7
+i1 is an integer constant, while i2 is an integer variable.
+
+
+
+
+ 
+
+Integer Sizes
+On 32-bit systems Int can store any integer from -2,147,483,648 to 2,147,483,648.
+
+Swift has the following int type for various size and unsigned integers: Int8 Int16 Int32 Int64 UInt8 UInt16 UInt32, and UInt64.
+
+In these data types, the numbers indicate the size of the integer.
+
+For example, Int8 means 8-bit, which gives you an integer range of -127 to 127.
+
+The data types that have a U as the first character are unsigned integers. These integers must be positive. UInt8 gives you a range of 0 to 255.
+
+
+
+
+ 
+
+Floating-Point Numbers
+Floating-point numbers can have decimal places.
+
+An example of a floating-point number is 9.99.
+
+To specify a floating-point number, you can use the Float data type, as shown in the following example.
+
+let f1:Float = 9.99
+let f2 = 3.14
+If you leave out the data type and include a number with decimal places, Swift will use type inference to figure out the data type as Float data type.
+
+Float is a 32-bit floating-point number, and you should use that when you don't require 64-bit precision.
+
+When you do require 64-bit precision, use the Double data type, as shown in the following code.
+
+let d1:Double = 1.2345
