@@ -1,0 +1,22 @@
+Closures are blocks of code that you can pass to functions as parameters or store as variables or constants.
+
+Closures capture the state of the other variables around them.
+
+var alpha = ["D", "E", "A", "C", "B"]
+let alpha_sorted = sorted(alpha, { (s1: String, s2: String) -> Bool in
+   return s1 < s2
+})
+Closures can be stored in variables or constants and used later as parameters.
+
+let closure = { (s1: String, s2: String) -> Bool in
+   return s1 < s2
+};
+
+let alpha_sorted_2 = sorted(alpha, closure)
+The following code shows how to call Closures
+
+let closure = { (s1: String, s2: String) -> Bool in
+   return s1 < s2
+};
+
+let b = closure("B", "A")
