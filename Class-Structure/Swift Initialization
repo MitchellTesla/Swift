@@ -1,0 +1,63 @@
+We initialize an instance to get the instance ready for use.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+}
+
+var p = Person()
+
+p.name = "Jack"
+p.age = 4
+In the code above we called the default initializer by using the class name followed by parentheses: Person().
+
+
+
+
+ 
+
+Custom initializer
+We can use init() to override the default initializer. In the custom initializer we can set the default property values in the class declaration.
+
+class Person {
+    var name: String
+    var age:Int
+    init() {
+        self.name = "Name"
+        self.age = 0
+    }
+}
+In the code above we overrode the default initializer init() to set the default property of name to Name and of age to 0.
+
+
+
+
+ 
+
+Initializer with Parameters
+You can add parameters to custom initializers.
+
+class Person {
+    var name: String
+    var age:Int
+
+    init() {
+        self.name = "Name"
+        self.age = 0
+    }
+
+    init(name:String, age:Int) {
+        self.name = name
+        self.age = age
+    }
+
+}
+var p = Person(name: "Jack", age: 4)
+De-initialization
+When an instance is no longer need, Swift deallocates the instance and frees up the instance resources.
+
+class Person {
+    deinit {
+        //release any resources
+    }
+}
