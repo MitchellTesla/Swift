@@ -1,0 +1,68 @@
+A string is a sequence of characters, such as "Hello World!".
+
+Strings use the String data type, although you don't need to specify the data type to use a string.
+
+var s1 = "Hello World!"
+Unicode Characters
+Strings can include any Unicode characters.
+
+To write single-byte Unicode characters, you must include \x before the two hexadecimal digits.
+
+Two-byte Unicode characters are prefixed with \u before four hexadecimal digits, and four-byte Unicode characters have \U written before eight hexadecimal digits.
+
+The following code shows an example of using Unicode characters.
+
+let percentage = "\x{25}"
+let snowflake = "\u{2744}"
+let heart = "\u{0001F497}"
+
+
+
+ 
+
+Character Data Type
+Strings are collections of characters, and characters have their own data type called Character.
+
+Characters can have only one character, and you must explicitly declare your variable or constant as a Character.
+
+The following code shows how to declare a Character type value.
+
+let c1:Character = "A"
+Concatenation
+In Swift, you can combine strings and characters to create longer strings.
+
+The following code shows how to create an alphabet string based on characters and strings.
+
+//Declare characters and strings
+let c1:Character = "A"
+let c2:Character = "B"
+let c3:Character = "C"
+let c4:Character = "D"
+let c5:Character = "E"
+let s2 = "FGHIJ"
+
+//Declare an empty string
+var alphabet = String()
+
+//Concatenate strings, characters and literals
+alphabet = c1 + c2 + c3 + c4 + c5 + s2 + "KLMNOP"
+
+
+
+ 
+
+Comparing Strings
+We can compare two strings with comparison operator ==. It returns a boolean (true or false) value back.
+
+alphabet == "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+String Interpolation
+To print out different variables, constants, literals, and expressions in a string, use string interpolation.
+
+String interpolation puts a forward slash \ in front of a variable name in parentheses.
+
+let i:Int = -25
+let f:Float = 3.14
+let d:Double = 99.99
+let b:Bool = true
+
+println("i = \(i), f = \(f), d = \(d), b = \(b)")
