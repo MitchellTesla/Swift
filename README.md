@@ -1,5 +1,5 @@
 # Swift - MITCHELL 2021 v0.7.0
-Swift is a programming language customized by Apple and introduced as Objective-C without the C.
+Swift is the programming language customized by Apple and introduced as Objective-C without the C.
 Swift is an object-oriented language that builds upon familiar concepts from Objective-C but includes a modern, safer syntax and multiple paradigms such as object-oriented, functional, imperative, and block structured.
 
 
