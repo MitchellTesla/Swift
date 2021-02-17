@@ -1,0 +1,136 @@
+We can use classes to define types in Swift.
+
+Classes give us a way of grouping related information and behavior together.
+
+To define a Swift class, use the class keyword.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+
+    func profile() -> String {
+       return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+
+}
+In the code above we defined a class named Person.
+
+The Person class consists of a string for a person's name and an integer for a person's age.
+
+These variable and constant types are called properties.
+
+
+
+
+ 
+
+Class Instances (Objects)
+To use a Person instance, create a new instance based on this definition.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+
+    func profile() -> String {
+       return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+}
+var p = Person()
+In Swift, objects are usually references to instances for both structures and classes.
+
+
+
+
+ 
+
+Accessing Class Properties
+For class instance properties you use dot syntax.
+
+p.name = "Tom"
+p.age = 40
+In the code above we use dot syntax to change the variable values.
+
+Classes are reference types.
+
+When you use an assignment operator, you assign only a reference to the instance.
+
+When changing a class instance members, they will reflected in the instance everywhere in the program.
+
+Class and Structure Instances
+struct S {
+    var i = 1
+}
+
+class C {
+    var i = 1
+}
+
+var s = S()
+
+var c = C()
+
+println("s.i = \(s.i)")
+println("c.i = \(c.i)")
+The statements in Listing 32-2 will print this:
+
+s.i = 1
+c.i = 1
+Class vs Structure and Reference vs. Copy
+The major difference between referencing and copying instances happends when using the assignment operator = to reference the instance.
+
+For a structure, you get a copy of the instance during the assignment. This copy acts independently from the original instance. Changing the copy will not be reflected in the original instance.
+
+Assigning a variable to a class instance makes changes to the class instance members, the original instance content will also change.
+
+struct S {
+    var i = 1
+}
+
+class C {
+    var i = 1
+}
+
+var s2 = s
+var c2 = c
+s2.i = 2
+c2.i = 2
+println("s.i = \(s.i)")
+println("c.i = \(c.i)")
+
+The code above generates the following result.
+
+
+From the output we can see that the original structure member didn't change while the original class instance member's value changed to be the same value as the i property on c2.
+
+Class Identity Operators
+Class equality operator === compares two class instances.
+
+This operator returns true if the instance variables both point to the same instance.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+
+}
+var p1 = Person()
+p1.name = "A"
+p1.age = 40
+
+var p2 = Person()
+p2.name = "B"
+p2.age = 25
+
+var b1 = p2 === p2
+var b2 = p1 === p2
+The code above generates the following result.
+
+b1 is true since they are both the same instance, b2 is false.
+
+Class Inequality Identity Operator
+The class instance inequality identity operator !== tests to see whether two instances do not point to the same instance.
+
+var b7 = p1 !== p1 //returns false
