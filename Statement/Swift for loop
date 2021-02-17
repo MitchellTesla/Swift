@@ -1,0 +1,70 @@
+The for loop executes a set number of times.
+
+We use the for keyword along with an ending condition and a for-loop statement.
+
+Example
+The following loop statement prints out 1 through 10 to the console.
+
+for var i = 1; i <= 10; ++i {
+   println("i = \(i)")
+}
+The code above generates the following result.
+
+
+Nested for statement
+for x in 1...3 {
+    for y in 1...3 {
+        println("x = \(x), y = \(y)")
+    }
+}
+The code above generates the following result.
+
+
+
+
+
+ 
+
+Nested for loop with continue
+If you wanted to skip any value where y equals 2, you could just include a continue statement right inside the innermost loop.
+
+for x in 1...3 {
+    for y in 1...3 {
+        if y == 2{
+            continue
+        }
+        println("x = \(x), y = \(y)")
+    }
+}
+The code above generates the following result.
+
+
+
+
+
+ 
+
+for-in Loop
+Use the for in loop to iterate over items in collections such as arrays and dictionaries.
+
+To use a for in loop, specify a local variable name and the collection you are iterating over.
+
+let names = ["A", "B", "C"]
+
+for n in names{
+    println(n)
+}
+
+let inventory = [1:"SQL", 2:"Java", 3:"C"]
+
+for (key,item) in inventory{
+    println("\(key) : \(item)")
+}
+The following code iterates with Range Operators.
+
+var result = 0
+
+for i in 1...3{
+   ++result
+}
+The above code 3 uses a range operator to specify a range between 1 and 3 and uses this to increment the variable result.
