@@ -1,0 +1,32 @@
+You use an enumeration or an enum to define a restricted set of values.
+
+The following code defines an enumeration for a thread state.
+
+enum State {
+    case Inactive
+    case Active
+    case Hibernate
+    case Terminated
+}
+
+var machineState = State.Inactive
+
+machineState == State.Inactive ?  println("Inactive") : println("State Unknown")
+
+
+
+
+ 
+
+Example
+To define an enumeration for the alphabet while keeping track of the position of each letter in the alphabet, use the code as follows.
+
+enum Alphabet:Int{
+    case A = 1
+    case B, C, D, E, F, G, H, I
+    case J, K, L, M, N, O, P, Q
+    case R, S, T, U, V, W, X, Y, Z
+}
+To add the integer value of A to the integer value of B, use the code as follows.
+
+let result = Alphabet.A.toRaw() + Alphabet.B.toRaw()
