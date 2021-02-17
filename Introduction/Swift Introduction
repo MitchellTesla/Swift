@@ -1,0 +1,40 @@
+Swift is an object-oriented language.
+
+Swift builds upon familiar concepts from Objective-C but includes a modern, safer syntax and multiple paradigms such as object-oriented, functional, imperative, and block structured.
+
+Swift is a programming language customized by Apple and introduced as Objective-C without the C.
+
+Swift can work with the existing Cocoa and Cocoa Touch frameworks, which contain all the familiar classes used in modern Mac and iOS apps.
+
+Swift provides a lot of safety in terms of
+
+type checking,
+constants for immutability,
+requiring values to be initialized before use,
+built-in overflow handling, and
+automatic memory management.
+Swift was built using the highly optimized LLVM compiler.
+
+
+
+
+
+Constants
+The following code creates a constant and stores the string "Hello World" in a constant named s1.
+
+let s1:String = "Hello World"
+The first part of the constant declaration is the let keyword.
+
+The let keyword is used to define a constant.
+
+The next part is the constant name s1.
+
+You also have the type declaration :String.
+
+Variables
+Variables use the var keyword instead of the let keyword to declare.
+
+Variable values can change.
+
+var s2:String = "Hello World"
+s2 = "Hola Mundo"
