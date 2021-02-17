@@ -1,0 +1,42 @@
+We use code comments to add information to our code.
+
+With Swift, you can add a one-line code comment, multiple-line code comments, and nested code comments.
+
+One-Line Code Comments
+Use the double backslashes // to start a one-line code comment.
+
+//One line code comment
+You can fill up one line with these types of comments.
+
+Multiline Comments
+A multiline comment starts the comment with a backslash and asterisk /*, write the comment, and end it with an asterisk and backslash */.
+
+/*
+   Multiple line code comment
+   Use this when you need to provide more detail
+*/
+
+
+
+
+ 
+
+Nested Code Comments
+Swift supports nested comments.
+
+        /*
+        /*
+        Define a and b constants
+        */
+
+        let a = 1
+        let b = 2
+
+        /*
+        Define c and d constants
+        */
+
+        let c = 3
+        let d = 4
+        */
+In the code above the last comments is nested comments
