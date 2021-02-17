@@ -1,0 +1,124 @@
+Classes have the ability to inherit methods and properties from a parent class.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+}
+
+class Employee: Person {
+
+}
+In the code above, Employee is inheriting from Person.
+
+To indicate what class to inherit, add a colon : and the name of the parent class.
+
+
+
+
+ 
+
+Example
+The following code adds more properties or methods to the new class.
+
+class Employee: Person {
+    var employeeNumber = 9
+    var hourlyRate = 12.00
+}
+
+var e1 = Employee()
+e1.name = "Jack"
+e1.age = 38
+e1.employeeNumber = 1
+e1.hourlyRate = 10.50
+
+
+
+ 
+
+Overriding Methods and Properties
+When inheriting a class, we can change how the parent class methods and properties behave by overriding them.
+
+The following code shows how to override Methods.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+}
+
+class Employee: Person {
+    var employeeNumber = 1234567890
+    var hourlyRate = 12.00
+    override func profile() -> String {
+        return "I'm \(self.name) and my hourly rate is $\(self.hourlyRate)"
+    }
+
+}
+
+var p1 = Person()
+
+p1.name = "Jack"
+p1.age = 40
+
+println(p1.profile())
+
+var e1 = Employee()
+
+e1.name = "Jodd"
+e1.age = 18
+e1.employeeNumber = 1
+e1.hourlyRate = 45.55
+
+println(e1.profile())
+
+Override Properties
+We can also override property declarations.
+
+The following code shows how to override properties.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+
+    var lastName:String {
+       get {
+           return "NoName"
+       }
+       set {
+           _lastName = newValue
+       }
+    }    
+}
+class Employee: Person {
+    var employeeNumber = 2
+    var hourlyRate = 12.00
+
+
+    override var lastName:String {
+       get {
+           return "Anonymous"
+       }
+       set {
+           _lastName = newValue
+       }
+    }
+
+}
+
+var p1 = Person()
+p1.lastName = "A"
+
+var e1 = Employee()
+e1.lastName = "B"
+
+println(p1.lastName)
+println(e1.lastName)
