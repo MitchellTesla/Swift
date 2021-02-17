@@ -1,0 +1,27 @@
+You use range operators to specify a range of integers such as 1 through 10.
+
+There are two types of range operators: the closed range operator ... and the half-open range operator ..< .
+
+Closed Range Operator
+The closed range operator specifies a range of numbers including the number that defines the end of the range.
+
+You must specify the beginning of the range and the end of the range with the closed range operator ....
+
+The code in the following code produces output that includes i = 1 through i = 10.
+
+for i in 1...10 {
+   println("i = \(i)")
+}
+
+
+
+ 
+
+Half-Open Range Operator
+The half-open range operator ..< doesn't have the ending value in the range.
+
+The following code prints out to i = 9 only.
+
+for i in 0..<10 {
+   println("i = \(i)")
+}
