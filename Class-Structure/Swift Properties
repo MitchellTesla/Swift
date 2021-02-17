@@ -1,0 +1,159 @@
+We can use properties to describe attributes of an object.
+
+To add a property to an object in Swift, add a variable or constant declaration to the type definition.
+
+Properties are not limited to class definitions in Swift. Enumerations and structures can also have property declarations.
+
+Example
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+}
+
+var p = Person()
+
+p.name = "Jack"
+p.age = 4
+
+println("p.name = \(p.name)")
+println("p.age = \(p.age)")
+
+
+
+
+ 
+
+Getter and Setter
+We can add a getter and setter to the simple stored properties.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0
+    private var _lastName:String = ""
+
+    var lastName:String{
+        get {
+            return _lastName
+        }
+        set {
+            _lastName = newValue
+        }
+    }
+
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+}
+var p = Person()
+p.name = "Tom"
+p.lastName = "Simth"
+
+
+
+ 
+
+Lazy Properties
+A lazy stored property's value will not be generated until the first time the property value is used.
+
+Lazy Properties are used when the property represents a resource that may be expensive to generate and needed in only specific situations.
+
+To make a property a lazy stored property, you use the lazy modifier.
+
+For instance, the following code shows how you would make the name property of the Person class a lazy stored property.
+
+class Person {
+    lazy var name: String = "Name"
+    var age:Int = 0
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+}
+
+var p = Person()
+
+p.name = "Tom"
+p.age = 40
+Computed Properties
+Computed properties take input values and return a new result.
+
+Computed properties act more like functions.
+
+class Person {
+   lazy var name: String = "Name"
+   var age:Int = 0
+
+   var profile:String{
+       get{
+           return "I'm \(self.name) and I'm \(self.age) years old."
+       }
+   }
+
+}
+
+var p = Person()
+
+p.name = "Tom"
+p.age = 40
+p.profile
+Property Observers
+We can listen to the change event of a property with the willSet and didSet keywords.
+
+These keywords in the property declaration assigns an action handlers which is called when a property is about to change and when a property value was just changed.
+
+class Person {
+    var name: String = "Name"
+    var age:Int = 0{
+        willSet{
+            println("age is about to change to \(newValue)")
+        }
+        didSet{
+            println("age was just changed to \(self.age)")
+        }
+    }
+    func profile() -> String {
+        return "I'm \(self.name) and I'm \(self.age) years old."
+    }
+}
+var p = Person()
+p.age = 40
+The code above generates the following result.
+
+
+Class Type Properties
+Class Type properties belong to a particular type, not to instances of a type. It is like the static field in Java.
+
+We use the class keyword to declare a type property for a class.
+
+class Person {
+    class var species:String{
+        return "Human"
+    }
+}
+Person.species
+
+Value Type Properties
+Value type properties can be computed properties or stored properties, and you can change the value of stored type properties.
+
+Use the static keyword to declare a type property for an enumeration or a structure.
+
+struct Rectangle {
+    var x:Int = 0
+    var y:Int = 0
+    var width:Int = 0
+    var height:Int = 0
+
+    static var gtp = "This is a rectangle"
+}
+
+Rectangle.gtp
+We can access type property values by referencing the type name and using dot syntax to access the value.
+
+We can treat type properties for value types such as enumerations and structures in the same way that we do for instance properties.
+
+Rectangle.gtp = "Something else"
+
+print(Rectangle.gtp)
