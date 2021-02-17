@@ -1,0 +1,21 @@
+We can use extensions to add methods and computed properties to an existing class, structure, or enumeration.
+
+Example
+The following code shows how to extend the Person Class
+
+class Person {
+    var age:Int = 0
+}
+
+extension Person {
+    var yearsToRetire:Int {
+        get{
+            return 65 - self.age
+        }
+    }
+}
+
+var p = Person()
+p.age = 40
+
+println(p.yearsToRetire)
