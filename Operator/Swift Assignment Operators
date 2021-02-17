@@ -1,0 +1,40 @@
+To initialize or update a value, use the assignment operator =.
+
+var a = 1
+let b = 2 //Assigning a constant value
+
+a = 3 //Updating Values
+
+let (c, d) = (4, 5) // Multiple Assignments
+c will equal 4, and d will equal 5.
+
+To assign tuple values, supply the variable or constant with a comma-separated list of values enclosed in parentheses.
+
+let e = (6, 7, 8)
+To extract a tuple value, use an assignment operator to assign one of the tuple values to a new variable or constant.
+
+Every tuple value except the one you are interested in must be replaced with an underscore _ character.
+
+The following code shows how to extract a Tuple Value
+
+let (_,_,f) = e
+In the code above f has the same value as the third value in the tuple e.
+
+
+
+
+ 
+
+Compound Operators
+The assignment operator is often combined with an arithmetic operator to perform an arithmetic operator and assign the result to the value.
+
+The following code shows how to use Compound Assignment/Arithmetic Operations.
+
+//Declare and assign i integer equal to 0
+var i = 0
+
+//Add 4 to i and assign result back to i
+i+=4
+
+//Multiple i by 2 and assign result back to i
+i*=2
