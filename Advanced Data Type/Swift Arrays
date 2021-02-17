@@ -1,0 +1,78 @@
+To organize a list of variables, we can use arrays.
+
+All items in an array must be of the same type.
+
+Example
+The following code shows two ways to create empty arrays that you can add items to later.
+
+var a1:Array<String> = Array<String>()
+var a2:[String] = [String]()
+The first line shows the long way of declaring an array.
+
+You must use the Array keyword and include the type that is stored in the array between <>.
+
+a1 is an array that can hold a list of strings.
+
+You must also use the assignment operator = to initialize the array followed by the word Array along with the type between <> signs.
+
+The second line is a shorthand method for creating arrays.
+
+We can also use array items to initially create the array.
+
+Swift supports type inference, and you can omit the initialization and the type declaration as follows.
+
+var a3 = ["A", "B", "C"]
+
+
+
+ 
+
+Array Mutability
+We can add, remove, and change the items in the array.
+
+We can create immutable arrays with let keyword when creating the array.
+
+let a1 = ["D", "E", "F"]
+Adding Items to Arrays
+Arrays store items in a list that is indexed by integers starting with zero.
+
+Use the += operator or the append function to add items to the end of an array.
+
+a1+="Apples"
+a1.append("Oranges")
+a1 would now contain the two strings "Apples" and "Oranges".
+
+To insert a new item to the middle of an array, use the insert function.
+
+a1.insert("Swift", atIndex: 1)
+
+
+
+ 
+
+Removing Items from Arrays
+To remove items from arrays, use removeAtIndex().
+
+Supply the index of the item to remove from the array.
+
+The following code shows an example that you can use to remove items from arrays.
+
+a1.removeAtIndex(0)
+a1.removeLast()
+a1.removeAll(keepCapacity: false)
+The parameter in removeAll(keepCapacity:) lets you indicate whether you want the array to stay initialized for the number of items that the array contained.
+
+If you know you are replacing the items immediately, it could save processing resources if you leave the array initialized.
+
+Changing Items in Arrays
+To change an item in an array, you simply reference the item index in square brackets and use the assignment operator to change the item.
+
+var a1 = [1, 2, 0, 4, 5]
+a1[2] = 3
+Iterating Over Array Items
+You can use the for in loop to do this.
+
+var a1 = [1, 2, 3, 4, 5]
+for i in a4{
+    println("i = \(i)")
+}
