@@ -1,0 +1,28 @@
+while loops work by evaluating a condition and executing code as long as the condition is true.
+
+You write a while loop by including the while keyword followed by the condition and the code block to execute.
+
+Example
+var i = 1
+
+while i <= 10{
+    println("i = \(i)")
+    i++
+}
+The code above generates the following result.
+
+
+
+
+
+ 
+
+do-while Loop
+The do-while loop will execute the code in the block before evaluating the condition.
+
+Use this loop when you want to make sure that code executes at least one time.
+
+do{
+   println("i = \(i)")
+   i++
+}while i <= 10
