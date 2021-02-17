@@ -1,0 +1,13 @@
+Boolean values can be either true or false.
+
+Booleans are used to help evaluate logical expressions.
+
+To declare a boolean value, you can assign a value immediately, or you can use the Bool data type to declare a boolean variable.
+
+Example
+var b1:Bool
+let b2 = false
+
+let alphabet = "ABCDEFGHIJKLMNOP"
+let b4 = alphabet == "ABCDEFGHIJKLMNOP"
+The value of b4 is true because the two strings are the same.
