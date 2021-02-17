@@ -1,0 +1,70 @@
+You can use structures to define custom types in Swift.
+
+Structures give you a way of grouping related information together.
+
+To define a Swift structure, use the struct keyword.
+
+struct Rectangle {
+    var x:Int = 0
+    var y:Int = 0
+    var width:Int = 0
+    var height:Int = 0
+}
+
+
+
+ 
+
+Structure Instances
+To use a structure type, you must create a new instance based on this definition.
+
+struct Rectangle {
+    var x:Int = 0
+    var y:Int = 0
+    var width:Int = 0
+    var height:Int = 0
+}
+
+var rect = Rectangle()
+
+
+
+
+ 
+
+Accessing Structure Properties
+To access structure properties, you use dot syntax.
+
+rect.x = 10
+rect.y = 10
+rect.width = 100
+rect.height = 50
+
+println("x: \(rect.x), y: \(rect.y), width: \(rect.width),height: \(rect.height)")
+Structures are value types. This means members are copied and not passed by reference when the assignment statement is used.
+
+Structure Functions
+Swift structure types can have functions as part of their definition.
+
+This means Swift structures not only can organize data but can define behavior.
+
+The following code adds a function to a structure.
+
+struct Rectangle {
+    var x:Int = 0
+    var y:Int = 0
+    var width:Int = 0
+    var height:Int = 0
+
+    func description() -> String{
+        return ("x: \(x), y: \(y), width: \(width), height: \(height)")
+    }
+
+}
+var rect = Rectangle()
+rect.x = 10
+rect.y = 10
+rect.width = 100
+rect.height = 50
+
+println(rect.description())
