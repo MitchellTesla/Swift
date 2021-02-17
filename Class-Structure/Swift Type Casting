@@ -1,0 +1,37 @@
+Type casting is to convert value types such as floating-point and integer numbers to other types in Swift.
+
+The following code shows some examples of how you might convert a floating-point number to other value types.
+
+let f1 = 9.99
+let i1 = Int(f1)
+let d1 = Double(f1)
+let b1 = Bool(f1)
+let s1 = toString(f1)
+Type Casting Instances
+We can type cast objects using the as keyword.
+
+class Person {
+    var name: String = "Name"
+    func printPerson() {
+        println("person")
+    }
+}
+
+class Employee: Person {
+    func printEmployee() {
+        println("employee")
+    }
+}
+
+var e1 = Employee()
+e1.name = "Jack"
+
+e1.printPerson()
+e1.printEmployee()
+
+let a1 = [e1]
+
+for item in a1 {
+   let p = item as Person
+   p.printPerson()
+}
