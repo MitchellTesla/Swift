@@ -1,0 +1,62 @@
+A dictionary stores key-value pair.
+
+Arrays keep items in the order in which you put the items into the array, while dictionaries don't guarantee any order at all.
+
+Example
+To create a new dictionary, specify both the data type for the key and the data type for the value.
+
+var d1:Dictionary<String, Int>
+d1 is declared as a dictionary that requires String keys and Int values.
+
+Before you add any items, you will need to initialize d1
+
+d1 = Dictionary()
+A dictionary literal is an constant dictionary that is filled with an immutable collection of keys and values.
+
+var myDictionary = [1:"a",2:"b", 3:"c"]
+The code above creates a dictionary called myDictionary that uses integers as keys and stores web page addresses as string values.
+
+
+
+
+ 
+
+Referencing Dictionary Items
+To reference a dictionary item, supply the key enclosed in square brackets [], after the dictionary name.
+
+var myDictionary = [1:"a", 2:"b", 3:"c"]
+
+let blogPage = myDictionary[2]
+Updating Dictionary Items
+You can update the value of a mutable dictionary by getting a reference to the item and using the assignment operator to supply the new value.
+
+myDictionary[1] = "new value"
+The following code shows how to use String and Float Keys
+
+var d2:Dictionary = ["a":"AAAA", "b":"BBBB"]
+var d3:Dictionary = [1.1:"AAAA", 1.2:"BBBB"]
+
+d2["a"] = "string"
+d3[1.2] = "string"
+To remove an item from a dictionary, simply update the item with the nil value or use the removeValueForKey() function.
+
+d2["b"] = nil
+d2.removeValueForKey("a")
+
+
+
+ 
+
+Iterating Over Dictionary Items
+To iterate over dictionary items, use the for in loop.
+
+You will get a reference to each key and item in the loop.
+
+for (key, value) in d3{
+   println("key:\(key), value:\(value)")
+}
+To iterate through the keys, access the key property on the dictionary.
+
+for key in d3.keys{
+   println("key:\(key)")
+}
