@@ -1,0 +1,16 @@
+Assertions can help with your debugging efforts.
+
+Assertions work by testing a condition to see whether the condition is satisfied.
+
+If the condition is false, then a runtime error occurs, and the program stops executing.
+
+Assertions may have an optional message that is printed in the console window when the condition is false.
+
+Example
+To create an assertion, write the assertion shown as follows.
+
+var myValue = 4
+assert(myValue == 3, " myValue must be three ")
+The assert statement in the code above is testing to make sure that the myValue variable has the correct number.
+
+Assertions are tested only in Debug mode.
