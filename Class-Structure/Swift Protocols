@@ -1,0 +1,66 @@
+Protocols is like the interfaces in Java and C#.
+
+The protocols defines the properties, methods, and types that would require other types to implement.
+
+A protocol can be adopted or implemented by a type.
+
+Adopting a protocol means that a type will implement the definition defined in the protocol.
+
+To define a protocol, use the protocol keyword.
+
+protocol Printer {
+    func print()
+}
+The code above created a new protocol named Printer, which defined a function named print().
+
+If you coded a class that you wanted to adopt this protocol, you would write the code as follows.
+
+class aClass:Printer {
+
+}
+In the code above, we defined a class that adopted the Printer protocol.
+
+When you adopt a protocol, the protocol name goes after the class name and a colon :.
+
+
+
+
+ 
+
+Example
+If the class is also inheriting another class, you must list the protocol name after the parent class.
+
+For instance, if aClass inherited the Person class, you would need to use the code as follows.
+
+protocol Printer {
+    func print()
+}
+
+class aClass:Printer {
+    func print() {
+        println("Implement print for aClass")
+    }
+}
+
+var obj = aClass()
+
+obj.print()
+When you use protocols to specify variables, you must include the getter and/or setter definitions.
+
+protocol Printer {
+    func print()
+    var i:Int {get set}
+}
+
+class aClass:Person, Printer {
+
+    var i = 0
+
+    func print() {
+        println("Implement print for aClass & i = \(self.i)")
+    }
+}
+
+var obj = aClass()
+
+obj.print()
