@@ -1,0 +1,52 @@
+We can nest other types in our type definitions.
+
+Example
+The following code creates a Person with nested class.
+
+class Person {
+    var health = Health()
+
+    class Health {
+        var pulse:Int = 100
+        var bmi:Int = 20
+
+        func profile() -> String {
+            return "Pulse:\(self.pulse), BMI:\(self.bmi)"
+        }
+    }
+}
+let p = Person()
+p.health.profile()
+
+
+
+
+ 
+
+Example 2
+The following code shows how to nested Structures
+
+struct Shapes {
+    struct Line {
+        var x:Int = 0
+        var y:Int = 0
+        var length:Int = 0
+    }
+
+    struct Rectangle {
+        var x:Int = 0
+        var y:Int = 0
+        var width:Int = 0
+        var height:Int = 0
+        var area:Int = 0
+    }
+
+    struct Circle {
+        let pi:Float = 3.1415
+        var radius:Float = 0.0
+    }
+    
+}
+
+var c = Shapes.Circle()
+c.radius = 45.0
